@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="css/tic-tac-toe.css" />
+  </head>
+  <body>
+
+    <div class="container">
+        
+      <div id="tictactoe"></div>
+      <div id="player" align="center">
+          <table id ="table">
+              <tr>
+               <td class="cell" onclick="turnClick(id)" id="0"></td>
+               <td class="cell" onclick="turnClick(id)" id="1"></td>
+               <td class="cell" onclick="turnClick(id)" id="2"></td>
+              </tr>
+
+              <tr>
+                    <td class="cell" onclick="turnClick(id)" id="3"></td>
+                    <td class="cell" onclick="turnClick(id)" id="4"></td>
+                    <td class="cell" onclick="turnClick(id)" id="5"></td>
+                </tr>
+
+
+                <tr>
+                    <td class="cell" onclick="turnClick(id)" id="6"></td>
+                    <td class="cell" onclick="turnClick(id)" id="7"></td>
+                    <td class="cell" onclick="turnClick(id)" id="8"></td>
+                 </tr>
+
+
+
+          </table>
+        </div>
+        <span id="turn" align="">Player X</span>
+        <div class="endgame">
+            <div class="text"></div>
+
+        </div>
+        <button type="button" onclick=document.location.reload()> play again </button>
+
+    </div>
+    <script type="text/javascript" src="js/tic-tac-toe.js"></script>
+  </body>
+</html>
