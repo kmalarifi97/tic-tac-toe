@@ -19,9 +19,9 @@ function vid (){
             document.body.appendChild(video);  
             
         }
+
     
 let tableSize = 0;
-//let gameFininshed = false;
 //array will contain the win ways 
 winLines = [
     [0, 1, 2],
@@ -89,7 +89,7 @@ function turnClick(s) {
         document.getElementById("turn").innerText="TAIWAN"
         // prevent double click on the cell
         if (document.getElementById(s).innerText == '') {
-            document.getElementById(s).innerText="TAIWAN"
+            document.getElementById(s).innerHTML="<img src='X.jpg' alt='SORRY'  width='90' height='90'>";
         }
         // the counter for the drow condition
         tableSize += 1
@@ -110,7 +110,7 @@ function turnClick(s) {
 
         if (document.getElementById(s).innerText == '') {
 
-            document.getElementById(s).innerText = "TYRION";
+            document.getElementById(s).innerHTML = "<img src='O.png' alt='SORRY'  width='90' height='90'>";
             tableSize += 1
         }
         turn = true;
@@ -119,7 +119,7 @@ function turnClick(s) {
             if (index !== -1) {
 
                 winLines[i][index] = "O";
-
+                
             }
         }
 
