@@ -1,14 +1,30 @@
+
+    body {
+        background-image: url("BG.png");
+       }
+
+
+
+
+
+
+
 td {
-border:2px solid #333;
+border:2px solid rgb(254, 245, 245);
 height:100px;
 width: 100px;
 text-align: center;
 vertical-align:middle;
 font-family: "Comic Sans MS", cursive ,sans-serif;
-font-size: 60px;
+font-size: 20px;
 cursor:pointer;
- 
+ color:white;
 
+}
+span{
+
+
+    color: white;
 }
 table{
 
@@ -41,4 +57,13 @@ table tr td:last-child  {
     padding: 8px 16px;
     border: 1.5px solid;
     border-radius: 100px;
-    position: absolute;}
+
+          }
+video{
+
+    width: 50%;
+    padding: 300px 0;
+    margin:  auto;
+    
+    
+}

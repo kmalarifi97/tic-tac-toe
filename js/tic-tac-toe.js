@@ -1,3 +1,25 @@
+function vid (){
+    video = document.createElement("video");
+        video.setAttribute("id", "Myvideo");
+        video.setAttribute("controls", "controls");
+        video.autoplay=true;
+        video.src = "vid.mp4"; 
+        
+        document.body.appendChild(video);  
+        
+    }
+    function vid2 (){
+        video = document.createElement("video");
+            video.setAttribute("id", "Myvideo");
+            video.setAttribute("controls", "controls");
+
+            video.autoplay=true;
+            video.src = "vid1.mp4"; 
+            
+            document.body.appendChild(video);  
+            
+        }
+    
 let tableSize = 0;
 //let gameFininshed = false;
 //array will contain the win ways 
@@ -18,12 +40,14 @@ function chickWin() {
     for (j = 0; j < winLines.length; j++) {
         // comparing the winLines where index equals the counter j 
         if (compare(winLines[j], xWin)) {
-            alert("X");
+            vid();
             return;
+                    
+
         }
         if (compare(winLines[j], oWin)) {
-            alert("O");
-            return;
+            vid2();
+                return;
         }
         
         
@@ -62,10 +86,12 @@ turn = true;
 function turnClick(s) {
     // boolean turn to switch the turn
     if (turn == true) {
-        document.getElementById("turn").innerText="X TURN"
+        document.getElementById("turn").innerText="TAIWAN"
+        // prevent double click on the cell
         if (document.getElementById(s).innerText == '') {
-            document.getElementById(s).innerText = "X";
+            document.getElementById(s).innerText="TAIWAN"
         }
+        // the counter for the drow condition
         tableSize += 1
         for (let i = 0; i < winLines.length; i++) {
             // i will indecat the and the s will indecat the ck
@@ -80,11 +106,11 @@ function turnClick(s) {
     }
     else {
         //to stop 
-        document.getElementById("turn").innerText="O TURN"
+        document.getElementById("turn").innerText="TYRION"
 
         if (document.getElementById(s).innerText == '') {
 
-            document.getElementById(s).innerText = "O";
+            document.getElementById(s).innerText = "TYRION";
             tableSize += 1
         }
         turn = true;
